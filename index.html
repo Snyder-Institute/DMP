@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>DMP</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Data management plan (DMP)";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> DMP
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Data management plan (DMP)</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#why-implement-a-dmp">Why implement a DMP?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#common-data-management-pitfalls">Common data management pitfalls</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#recommended-directory-structure">Recommended directory structure</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#rationale-for-the-five-folder-model">Rationale for the five-folder model</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#suggested-subdirectory-organization">Suggested subdirectory organization</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#recommended-project-level-directory-layout">Recommended project-level directory layout</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#special-notes-on-the-projects-folder">Special notes on the projects folder</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#additional-guidelines">Additional guidelines</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#readme-files-mandatory">README files (mandatory)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#permissions-and-ownership">Permissions and ownership</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#shared-directories">Shared directories</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#default-permissions">Default permissions</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#group-ownership">Group ownership</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#immutable-read-only-data">Immutable read-only data</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#symbolic-links">Symbolic links</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#environment-variables">Environment variables</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#backup-and-archiving-strategy">Backup and archiving strategy</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">DMP</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Data management plan (DMP)</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="data-management-plan-dmp">Data management plan (DMP)</h1>
+<ul>
+<li><strong>Every research group should implement a data management plan to ensure long-term sustainability</strong></li>
+<li>Last updated: December 23, 2025</li>
+</ul>
+<hr />
+<h2 id="why-implement-a-dmp">Why implement a DMP?</h2>
+<p>A data management plan (DMP) establishes consistent, transparent, and sustainable practices for storing, organizing, and maintaining research data. Implementing a DMP provides the following benefits:</p>
+<ul>
+<li><strong>Resource efficiency</strong>: Reduce storage costs and minimize researcher time spent locating, copying, or cleaning data.</li>
+<li><strong>Effective disk usage tracking</strong>: Enable monitoring of quotas and usage at the user and project level.</li>
+<li><strong>Reduction of redundancy and clutter</strong>: Prevent duplicated large files (for example, reference genomes) and eliminate orphaned or abandoned directories.</li>
+<li><strong>Improved documentation and accountability</strong>: Clearly identify directory ownership, contents, and purpose to support data reuse and validation cohorts.</li>
+<li><strong>Automation readiness</strong>: Support automated reporting of storage usage per user or project without manual inspection.</li>
+<li><strong>Streamlined backup and archiving</strong>: Simplify long-term backup, archiving, and data restoration workflows.</li>
+</ul>
+<h3 id="common-data-management-pitfalls">Common data management pitfalls</h3>
+<p>The following practices significantly hinder scalability, reproducibility, and storage efficiency:</p>
+<ul>
+<li>Retaining large files in uncompressed formats</li>
+<li>Duplicating reference genomes and annotations across multiple directories</li>
+<li>Inconsistent directory depth and naming conventions</li>
+<li>Mixing unrelated content within a single directory, such as:<ul>
+<li>Raw data</li>
+<li>Reference files</li>
+<li>Intermediate results</li>
+<li>Scripts and logs</li>
+<li>Final outputs</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="recommended-directory-structure">Recommended directory structure</h2>
+<p>All shared storage should be organized under <strong>FIVE root-level directories only</strong>:</p>
+<ul>
+<li><span style="color:red"><strong>RAWDATA</strong></span>: primary, unprocessed data (for example, FASTQ files).</li>
+<li><span style="color:red"><strong>RESULTS</strong></span>: version-controlled, processed datasets generated by standardized lab pipelines and intended for reuse.</li>
+<li><span style="color:red"><strong>EXTERNAL</strong></span>: third-party datasets obtained from public repositories or published studies.</li>
+<li><span style="color:red"><strong>REFERENCES</strong></span>: shared resources such as reference genomes, annotations, and indices.</li>
+<li><span style="color:red"><strong>projects</strong></span>: active working space for analyses, scripts, and collaboration.</li>
+</ul>
+<h3 id="rationale-for-the-five-folder-model">Rationale for the five-folder model</h3>
+<p>The separation into <code>RAWDATA</code>, <code>RESULTS</code>, <code>EXTERNAL</code>, <code>REFERENCES</code>, and <code>projects</code> is not cosmetic. Each folder has a distinct operational meaning that enables informed decisions about backup priority, cleanup strategy, and long-term sustainability:</p>
+<ul>
+<li><strong>Predictable cleanup when storage reaches quota</strong>: When storage pressure occurs, <code>projects</code> is the first target for cleanup, followed by selective pruning of derived files. <code>RAWDATA</code> and <code>RESULTS</code> are protected from ad hoc deletion, reducing the risk of irreversible data loss.</li>
+<li><strong>Clear backup prioritization</strong>: <code>RAWDATA</code> and <code>RESULTS</code> contain irreplaceable or high-value data and therefore receive the highest backup priority. In contrast, projects contains intermediate and reproducible outputs that can be regenerated if needed.</li>
+<li><strong>Explicit separation of re-downloadable data</strong>: <code>EXTERNAL</code> is reserved exclusively for third-party datasets that can be re-downloaded from public repositories or publications. This prevents unnecessary backup of recoverable data and simplifies restoration strategies.</li>
+<li><strong>Shared, single-source references</strong>: <code>REFERENCES</code> centralizes genomes, annotations, and indices that are shared across users and projects. This eliminates redundant copies, ensures consistency across analyses, and simplifies updates.</li>
+<li><strong>Automated and interpretable storage accounting</strong>: A fixed set of root folders enables automated reporting of storage usage per category. Administrators can immediately assess how much space is consumed by raw data, results, references, external datasets, or active projects without manual inspection.</li>
+</ul>
+<h3 id="suggested-subdirectory-organization">Suggested subdirectory organization</h3>
+<ul>
+<li><code>RAWDATA</code> and <code>RESULTS</code>: Organized by sequencing run, cohort, or experiment</li>
+<li><code>EXTERNAL</code>: Organized by PMID, consortium name, or study identifier</li>
+<li><code>REFERENCES</code>: Hierarchical structure <code>species → assembly → resource type</code> (for example, genome, annotation, tool-specific index)</li>
+<li><code>projects</code>: Flexible structure defined by project needs</li>
+</ul>
+<h3 id="recommended-project-level-directory-layout">Recommended project-level directory layout</h3>
+<p>Within each project directory, the following subfolders are encouraged:</p>
+<ul>
+<li><strong>Documents</strong>: Metadata, sample annotations, and study notes</li>
+<li><strong>FASTQ</strong>: Symbolic links pointing to raw data stored in <code>RAWDATA</code></li>
+<li><strong>Results</strong>: Intermediate and final analysis outputs specific to the project and finalized results should be copied to the <code>RESULTS</code> folder</li>
+<li><strong>Scripts</strong>: Analysis scripts and Slurm job files, ideally under version control (for example, Git)</li>
+<li><strong>Logs</strong>: Records of pipeline runs, errors, and processing step</li>
+</ul>
+<h3 id="special-notes-on-the-projects-folder">Special notes on the <code>projects</code> folder</h3>
+<ul>
+<li>Intended for intermediate files and active analyses</li>
+<li>Subject to regular cleanup</li>
+<li>First target for space reclamation when storage is limited</li>
+<li>Symbolic links should be used to avoid data duplication</li>
+</ul>
+<hr />
+<h2 id="additional-guidelines">Additional guidelines</h2>
+<ul>
+<li>Every <code>RAWDATA</code> and <code>projects</code> folder must contain a <code>README.txt</code></li>
+<li>Shared directories under <code>/work</code> and <code>/bulk</code> must use <strong>750 permissions</strong></li>
+<li>Directory names are capitalized to indicate controlled, shared resources</li>
+</ul>
+<h3 id="readme-files-mandatory">README files (mandatory)</h3>
+<p>Every project directory and the <code>RAWDATA</code> directory must include a README file.</p>
+<p>README files may be free-form but should, at minimum, record:</p>
+<ul>
+<li>Date of creation or update</li>
+<li>Project or sample description</li>
+<li>Data source</li>
+<li>Ownership and responsible contact</li>
+<li>Key processing steps or assumptions</li>
+</ul>
+<p>Examples below:</p>
+<pre><code class="language-txt">## Under RAWDATA folder
+# Project: MICROBENCH
+# Generated: Jared Schlechte
+# README by: Heewon Seo
+# Date: November 06, 2025
+# Data format: POD5
+# Data source: Oxfort Nanopore
+# Description: This folder contains raw Nanopore sequencing data (POD5 files)
+ along with automatically generated statistics and report files from MinKNOW. 
+ Some report files are missing due to MinKNOW processing failures.
+</code></pre>
+<pre><code class="language-txt">## Under RESULTS folder
+# Project: MICROBENCH
+# Generated: Heewon Seo
+# Date: November 10, 2025
+# Data format: BAM and FASTQ
+# Data source: Oxfort Nanopore
+# Description: This folder contains unaligned BAM files 
+from each plate and barcode-level FASTQ files that 
+were generated from POD5 files using the Griffin-Pipeline
+(https://github.com/Snyder-Institute/Griffin-Pipeline). 
+</code></pre>
+<h3 id="permissions-and-ownership">Permissions and ownership</h3>
+<h4 id="shared-directories">Shared directories</h4>
+<ul>
+<li>Use <code>750</code> (or <code>770</code> when appropriate) permissions</li>
+<li>Allow group-level read access while preserving ownership clarity</li>
+</ul>
+<p>Example commands:</p>
+<pre><code class="language-bash">chmod -R 750 FOLDER_NAME
+chmod 750 FILE_NAME
+</code></pre>
+<h4 id="default-permissions">Default permissions</h4>
+<p>Add the following to your <code>.bash_profile</code>:</p>
+<pre><code class="language-bash">umask 0027
+</code></pre>
+<h4 id="group-ownership">Group ownership</h4>
+<pre><code class="language-bash">chown -R heewon.seo:bioinformatics_hub FOLDER_NAME
+chgrp -R bioinformatics_hub FOLDER_NAME
+</code></pre>
+<h3 id="immutable-read-only-data">Immutable read-only data</h3>
+<h4 id="symbolic-links">Symbolic links</h4>
+<p>Use symbolic links to reference shared, immutable data:</p>
+<pre><code class="language-bash">ln -s SOURCE_FILE DEST_FILE
+unlink DEST_FILE
+</code></pre>
+<h4 id="environment-variables">Environment variables</h4>
+<p>Define shortcuts for frequently used directories:</p>
+<p>Create <code>~/.bash_env</code>:</p>
+<pre><code class="language-bash">REFERENCES=/work/bioinformatics_hub/REFERENCES/
+</code></pre>
+<p>Source it in <code>.bash_profile</code>:</p>
+<pre><code class="language-bash">if [ -f ~/.bash_env ]; then
+  source ~/.bash_env
+fi
+</code></pre>
+<hr />
+<h2 id="backup-and-archiving-strategy">Backup and archiving strategy</h2>
+<p>The backup system follows the <strong>3-2-1 rule</strong>:</p>
+<ul>
+<li>Maintain <strong>three copies</strong> of all critical data</li>
+<li>Store data on <strong>two different types of media</strong></li>
+<li>Keep <strong>one copy offsite</strong></li>
+</ul>
+<p><img alt="Overview" src="images/BackupStrategy.png" /></p>
+<p>Additional notes:</p>
+<ul>
+<li>Backup failover storage is offline, not internet-connected, and inaccessible to users to maximize data security.</li>
+<li><em>ResearchFS</em> provides a scratch-style <code>projects</code> workspace that supports active analyses without disrupting existing workflows.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>&copy; 2026 | <a href='https://Bioinformatics.ucalgary.ca/' target='_blank'>Bioinformatics Hub</a> | All Rights Reserved.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2025-12-23 20:20:38.797544+00:00
+-->
