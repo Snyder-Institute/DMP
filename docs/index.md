@@ -190,7 +190,7 @@ The backup system follows the **3-2-1 rule**:
   - Store data on **two different types of media**
   - Keep **one copy offsite**
 
-![Overview](images/BackupStrategy.png)
+![Overview](img/BackupStrategy.png)
 
   Additional notes:
 
