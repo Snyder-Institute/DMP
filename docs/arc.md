@@ -1,6 +1,6 @@
 # Advanced Research Computing (ARC)
 - **Help everyone understand the options available so we can fully utilize the ARC resources available to us**
-- Last updated: January 09, 2026
+- Last updated: January 13, 2026
 ---
 
 ## ARC folder permissions
@@ -146,6 +146,8 @@ Each advanced file system has its own strengths and trade-offs, and choosing bet
 ## ARC outage scheduling
 
 ARC outages at UCalgary are often scheduled on weekdays during daytime hours, which tends to maximize disruption for users.
+
+![Daytime](img/DaytimeMaintainance.png)
 
 In many commercial environments, this would be considered unacceptable (e.g., not being able to access Outlook during work hours). Even in academia, the typical practice is to schedule maintenance to minimize interruption for end users (for example, evenings, nights, or weekends when feasible). This scheduling culture feels somewhat unique here and has a real impact on productivity.
 
